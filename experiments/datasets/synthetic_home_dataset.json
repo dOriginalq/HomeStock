@@ -1,0 +1,56 @@
+{
+  "home": {
+    "id": "home-exp-001",
+    "name": "Research Test Residence",
+    "address": "400 Research Parkway"
+  },
+  "rooms": [
+    {
+      "id": "room-01",
+      "name": "Master Bedroom",
+      "boundary": [
+        {"lat": 37.7755, "lng": -122.4195},
+        {"lat": 37.7755, "lng": -122.4184},
+        {"lat": 37.7745, "lng": -122.4184},
+        {"lat": 37.7745, "lng": -122.4195}
+      ]
+    },
+    {
+      "id": "room-02",
+      "name": "Living Room",
+      "boundary": [
+        {"lat": 37.7765, "lng": -122.4195},
+        {"lat": 37.7765, "lng": -122.4180},
+        {"lat": 37.7755, "lng": -122.4180},
+        {"lat": 37.7755, "lng": -122.4195}
+      ]
+    },
+    {
+      "id": "room-03",
+      "name": "Study / Home Office",
+      "boundary": [
+        {"lat": 37.7745, "lng": -122.4195},
+        {"lat": 37.7745, "lng": -122.4188},
+        {"lat": 37.7738, "lng": -122.4188},
+        {"lat": 37.7738, "lng": -122.4195}
+      ]
+    }
+  ],
+  "storage_units": [
+    {"id": "st-01", "room_id": "room-01", "qr_id": "HS-ST-00001", "name": "Shelf A", "type": "Shelf", "lat": 37.7752, "lng": -122.4190},
+    {"id": "st-02", "room_id": "room-01", "qr_id": "HS-ST-00002", "name": "Drawer 1", "type": "Drawer", "lat": 37.7747, "lng": -122.4194},
+    {"id": "st-03", "room_id": "room-01", "qr_id": "HS-ST-00003", "name": "Wardrobe", "type": "Wardrobe", "lat": 37.7748, "lng": -122.4186},
+    {"id": "st-04", "room_id": "room-02", "qr_id": "HS-ST-00004", "name": "Media Console", "type": "Cabinet", "lat": 37.7760, "lng": -122.4188},
+    {"id": "st-05", "room_id": "room-03", "qr_id": "HS-ST-00005", "name": "Bookcase B", "type": "Shelf", "lat": 37.7741, "lng": -122.4191}
+  ],
+  "benchmark_queries": [
+    "Camera",
+    "Passport",
+    "HDMI",
+    "Notebook",
+    "Jeans",
+    "Coat",
+    "Charger",
+    "Earbuds"
+  ]
+}
