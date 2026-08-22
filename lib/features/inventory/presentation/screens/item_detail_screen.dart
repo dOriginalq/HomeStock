@@ -147,7 +147,7 @@ class _ItemDetailScreenState extends ConsumerState<ItemDetailScreen> {
                     value: s.id,
                     child: Text('${s.name} (${s.qrId})'),
                   );
-                }).toList>,
+                }).toList(),
                 onChanged: (val) {
                   if (val != null) setModalState(() => selectedDest = val);
                 },
