@@ -256,6 +256,40 @@ void main() {
   });
 
   // -------------------------------------------------------------------------
+  // polygonAreaMetres & polygonPerimeterMetres
+  // -------------------------------------------------------------------------
+  group('polygonAreaMetres & polygonPerimeterMetres', () {
+    test('calculates area for a rectangular room', () {
+      // ~10m x 10m room = ~100 m²
+      final boundary = _makeBoundary([
+        (37.77500, -122.41900),
+        (37.77509, -122.41900),
+        (37.77509, -122.41889),
+        (37.77500, -122.41889),
+      ]);
+      final area = service.polygonAreaMetres(boundary.points);
+      expect(area, greaterThan(50));
+      expect(area, lessThan(200));
+    });
+
+    test('calculates perimeter for a rectangular room', () {
+      final boundary = _makeBoundary([
+        (37.77500, -122.41900),
+        (37.77509, -122.41900),
+        (37.77509, -122.41889),
+        (37.77500, -122.41889),
+      ]);
+      final perimeter = service.polygonPerimeterMetres(boundary.points);
+      expect(perimeter, greaterThan(20));
+      expect(perimeter, lessThan(60));
+    });
+
+    test('returns 0 area for less than 3 points', () {
+      expect(service.polygonAreaMetres([]), 0.0);
+    });
+  });
+
+  // -------------------------------------------------------------------------
   // polygonCentroid
   // -------------------------------------------------------------------------
   group('polygonCentroid', () {

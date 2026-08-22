@@ -177,6 +177,51 @@ final class SpatialService {
   double _toRadians(double degrees) => degrees * math.pi / 180.0;
 
   // ---------------------------------------------------------------------------
+  // Polygon area & perimeter calculation (Geodesic / Shoelace formula)
+  // ---------------------------------------------------------------------------
+
+  /// Calculates the approximate planar surface area of the room boundary polygon
+  /// in square metres using the Shoelace formula projected on spherical coordinates.
+  double polygonAreaMetres(List<BoundaryPoint> points) {
+    if (points.length < 3) return 0.0;
+    const earthRadiusM = 6371000.0;
+    double area = 0.0;
+    final n = points.length;
+
+    for (int i = 0; i < n; i++) {
+      final j = (i + 1) % n;
+      final lat1 = _toRadians(points[i].latitude);
+      final lng1 = _toRadians(points[i].longitude);
+      final lat2 = _toRadians(points[j].latitude);
+      final lng2 = _toRadians(points[j].longitude);
+
+      area += (lng2 - lng1) * (2.0 + math.sin(lat1) + math.sin(lat2));
+    }
+
+    area = (area * earthRadiusM * earthRadiusM / 4.0).abs();
+    return area;
+  }
+
+  /// Calculates the total perimeter of the room boundary polygon in metres.
+  double polygonPerimeterMetres(List<BoundaryPoint> points) {
+    if (points.length < 2) return 0.0;
+    double perimeter = 0.0;
+    final n = points.length;
+
+    for (int i = 0; i < n; i++) {
+      final j = (i + 1) % n;
+      perimeter += distanceMetres(
+        lat1: points[i].latitude,
+        lng1: points[i].longitude,
+        lat2: points[j].latitude,
+        lng2: points[j].longitude,
+      );
+    }
+
+    return perimeter;
+  }
+
+  // ---------------------------------------------------------------------------
   // Polygon centroid (for map centering)
   // ---------------------------------------------------------------------------
 
