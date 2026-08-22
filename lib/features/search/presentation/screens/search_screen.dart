@@ -9,7 +9,7 @@ import '../../../../core/constants/app_constants.dart';
 import '../../../../core/constants/route_names.dart';
 import '../../domain/entities/item_search_result.dart';
 import '../../domain/repositories/search_repository.dart';
-import '../repositories/mock_search_repository.dart';
+import '../../data/repositories/mock_search_repository.dart';
 
 final searchRepositoryProvider = Provider<SearchRepository>((ref) {
   return MockSearchRepository();

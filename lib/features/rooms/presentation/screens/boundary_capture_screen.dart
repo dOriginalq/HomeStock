@@ -9,7 +9,7 @@ import '../../../../core/services/location_service.dart';
 import '../../../../core/services/spatial_service.dart';
 import '../../domain/entities/boundary_point.dart';
 import '../../domain/entities/room_boundary.dart';
-import '../../home/presentation/controllers/home_controller.dart';
+import '../../../home/presentation/controllers/home_controller.dart';
 
 /// Screen allowing the user to map a room's physical boundary by walking
 /// to each corner and pressing "Mark Point" on demand (no continuous tracking).

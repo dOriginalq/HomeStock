@@ -12,8 +12,8 @@ import '../../../movement/domain/repositories/movement_repository.dart';
 import '../../../rooms/domain/entities/room.dart';
 import '../../../storage/domain/entities/storage_unit.dart';
 import '../../domain/entities/item.dart';
-import '../../home/presentation/controllers/home_controller.dart';
-import '../../storage/presentation/screens/storage_detail_screen.dart';
+import '../../../home/presentation/controllers/home_controller.dart';
+import '../../../storage/presentation/screens/storage_detail_screen.dart';
 
 final movementRepositoryProvider = Provider<MovementRepository>((ref) {
   return MockMovementRepository();

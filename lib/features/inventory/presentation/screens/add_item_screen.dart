@@ -7,8 +7,8 @@ import '../../../../app/theme/app_spacing.dart';
 import '../../../../app/theme/app_typography.dart';
 import '../../../../core/constants/app_constants.dart';
 import '../../../storage/domain/entities/storage_unit.dart';
-import '../../home/presentation/controllers/home_controller.dart';
-import '../../storage/presentation/screens/storage_detail_screen.dart';
+import '../../../home/presentation/controllers/home_controller.dart';
+import '../../../storage/presentation/screens/storage_detail_screen.dart';
 
 class AddItemScreen extends ConsumerStatefulWidget {
   const AddItemScreen({this.storageId, super.key});

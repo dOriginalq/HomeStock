@@ -8,7 +8,7 @@ import '../../../../app/theme/app_typography.dart';
 import '../../../../core/constants/app_constants.dart';
 import '../../../../core/constants/route_names.dart';
 import '../../../rooms/domain/entities/room.dart';
-import '../../home/presentation/controllers/home_controller.dart';
+import '../../../home/presentation/controllers/home_controller.dart';
 
 class AddStorageScreen extends ConsumerStatefulWidget {
   const AddStorageScreen({this.roomId = '', super.key});

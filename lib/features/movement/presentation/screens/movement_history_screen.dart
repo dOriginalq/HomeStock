@@ -5,7 +5,7 @@ import '../../../../app/theme/app_colors.dart';
 import '../../../../app/theme/app_spacing.dart';
 import '../../../../app/theme/app_typography.dart';
 import '../../domain/entities/movement_record.dart';
-import '../../inventory/presentation/screens/item_detail_screen.dart';
+import '../../../inventory/presentation/screens/item_detail_screen.dart';
 
 class MovementHistoryScreen extends ConsumerWidget {
   const MovementHistoryScreen({super.key});

@@ -10,7 +10,7 @@ import '../../../../core/services/location_service.dart';
 import '../../../../core/services/spatial_service.dart';
 import '../../../storage/domain/entities/storage_position.dart';
 import '../../domain/services/qr_identity.dart';
-import '../../home/presentation/controllers/home_controller.dart';
+import '../../../home/presentation/controllers/home_controller.dart';
 
 class QrScannerScreen extends ConsumerStatefulWidget {
   const QrScannerScreen({super.key});

@@ -11,7 +11,7 @@ import '../../../inventory/data/repositories/mock_item_repository.dart';
 import '../../../inventory/domain/entities/item.dart';
 import '../../../inventory/domain/repositories/item_repository.dart';
 import '../../domain/entities/storage_unit.dart';
-import '../../home/presentation/controllers/home_controller.dart';
+import '../../../home/presentation/controllers/home_controller.dart';
 
 final itemRepositoryProvider = Provider<ItemRepository>((ref) {
   return MockItemRepository();
@@ -318,12 +318,13 @@ class _StorageDetailScreenState extends ConsumerState<StorageDetailScreen> {
 
     showModalBottomSheet<void>(
       context: context,
+      isScrollControlled: true,
       backgroundColor: Colors.white,
       shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
       ),
       builder: (ctx) => SafeArea(
-        child: Padding(
+        child: SingleChildScrollView(
           padding: const EdgeInsets.all(24),
           child: Column(
             mainAxisSize: MainAxisSize.min,
@@ -340,7 +341,7 @@ class _StorageDetailScreenState extends ConsumerState<StorageDetailScreen> {
               QrImageView(
                 data: qrPayload,
                 version: QrVersions.auto,
-                size: 200,
+                size: 180,
                 backgroundColor: Colors.white,
               ),
               const SizedBox(height: 16),
