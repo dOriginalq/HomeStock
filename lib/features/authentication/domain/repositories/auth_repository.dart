@@ -6,7 +6,10 @@ abstract interface class AuthRepository {
   /// Stream of current auth state. Emits null when logged out.
   Stream<UserEntity?> authStateChanges();
 
-  /// Gets current authenticated user or null.
+  /// Gets current authenticated user as a Result.
+  Future<Result<UserEntity>> getCurrentUser();
+
+  /// Gets current authenticated user synchronously or null.
   UserEntity? get currentUser;
 
   /// Signs in using email and password.

@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../features/authentication/data/repositories/firebase_auth_repository.dart';
 import '../../features/authentication/data/repositories/mock_auth_repository.dart';
 import '../../features/authentication/domain/repositories/auth_repository.dart';
 import '../../features/inventory/data/repositories/firestore_item_repository.dart';
@@ -66,5 +67,9 @@ final appSearchRepositoryProvider = Provider<SearchRepository>((ref) {
 
 /// Provides the active [AuthRepository].
 final appAuthRepositoryProvider = Provider<AuthRepository>((ref) {
+  final useFirebase = ref.watch(useFirebaseBackendProvider);
+  if (useFirebase) {
+    return FirebaseAuthRepository();
+  }
   return MockAuthRepository(db: MockDatabase.instance);
 });
