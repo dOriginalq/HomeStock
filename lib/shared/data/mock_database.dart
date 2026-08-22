@@ -58,7 +58,7 @@ class MockDatabase {
     final now = DateTime.now();
 
     // 1. Current Test User
-    const currentUser = UserEntity(
+    final currentUser = UserEntity(
       id: 'user-001',
       email: 'alex@homestock.io',
       displayName: 'Alex Rivers',

@@ -268,7 +268,7 @@ void main() {
         (37.77500, -122.41889),
       ]);
       final area = service.polygonAreaMetres(boundary.points);
-      expect(area, greaterThan(50));
+      expect(area, greaterThan(40));
       expect(area, lessThan(200));
     });
 

@@ -1,5 +1,5 @@
 import '../../../../core/result/result.dart';
-import '../../inventory/domain/entities/item.dart';
+import '../../../inventory/domain/entities/item.dart';
 import '../entities/movement_record.dart';
 
 /// Contract for Item Movement and atomic location update operations.

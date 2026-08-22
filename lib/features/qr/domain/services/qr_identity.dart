@@ -1,8 +1,8 @@
 import 'dart:convert';
 
-import '../../core/constants/app_constants.dart';
-import '../../core/errors/failures.dart';
-import '../../core/result/result.dart';
+import '../../../../core/constants/app_constants.dart';
+import '../../../../core/errors/failures.dart';
+import '../../../../core/result/result.dart';
 
 /// QR code identity for a storage unit.
 ///

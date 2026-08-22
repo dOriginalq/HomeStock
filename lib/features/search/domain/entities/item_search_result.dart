@@ -1,8 +1,8 @@
 import 'package:equatable/equatable.dart';
 
-import '../../inventory/domain/entities/item.dart';
-import '../../rooms/domain/entities/room.dart';
-import '../../storage/domain/entities/storage_unit.dart';
+import '../../../inventory/domain/entities/item.dart';
+import '../../../rooms/domain/entities/room.dart';
+import '../../../storage/domain/entities/storage_unit.dart';
 
 /// Resolved search result with full spatial hierarchy:
 /// Item -> Storage Unit -> Room -> Storage Position

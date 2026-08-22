@@ -1,0 +1,40 @@
+[
+  {
+    "name": "PointInPolygon_10k_Batch",
+    "duration_ms": 9,
+    "timestamp": "2026-08-22T17:59:54.917992",
+    "success": true,
+    "metadata": {
+      "iterations": 10000,
+      "polygon_vertices": 4
+    }
+  },
+  {
+    "name": "QrEncodeDecode_5k_Batch",
+    "duration_ms": 39,
+    "timestamp": "2026-08-22T17:59:54.958293",
+    "success": true,
+    "metadata": {
+      "iterations": 5000
+    }
+  },
+  {
+    "name": "HierarchicalItemSearch_1k_Batch",
+    "duration_ms": 15,
+    "timestamp": "2026-08-22T17:59:54.973858",
+    "success": true,
+    "metadata": {
+      "iterations": 1000,
+      "item_count": 12
+    }
+  },
+  {
+    "name": "AtomicMovementTransactions_500_Batch",
+    "duration_ms": 7,
+    "timestamp": "2026-08-22T17:59:54.980883",
+    "success": true,
+    "metadata": {
+      "iterations": 500
+    }
+  }
+]

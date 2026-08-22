@@ -48,14 +48,11 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  # Code generation
-  build_runner: ^2.4.12
-  riverpod_generator: ^2.4.3
-  custom_lint: ^0.6.7
-  riverpod_lint: ^2.3.13
-
-  # Linting
-  flutter_lints: ^4.0.0
+  # Code generation & linting
+  flutter_lints: ^5.0.0
+  build_runner: ^2.4.13
+  riverpod_generator: ^2.6.2
+  mockito: ^5.4.4
 
   # Testing
   mocktail: ^1.0.4
@@ -63,18 +60,7 @@ dev_dependencies:
 flutter:
   uses-material-design: true
 
-  assets:
-    - assets/images/
-    - assets/icons/
-    - assets/qr/
-
-  fonts:
-    - family: Inter
-      fonts:
-        - asset: assets/fonts/Inter-Regular.ttf
-        - asset: assets/fonts/Inter-Medium.ttf
-          weight: 500
-        - asset: assets/fonts/Inter-SemiBold.ttf
-          weight: 600
-        - asset: assets/fonts/Inter-Bold.ttf
-          weight: 700
+  # Asset directories
+  # assets:
+  #   - assets/images/
+  #   - assets/icons/

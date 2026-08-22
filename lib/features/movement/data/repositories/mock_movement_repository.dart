@@ -1,9 +1,9 @@
 import '../../../../core/errors/failures.dart';
 import '../../../../core/result/result.dart';
 import '../../../../shared/data/mock_database.dart';
-import '../../inventory/domain/entities/item.dart';
-import '../entities/movement_record.dart';
-import '../domain/repositories/movement_repository.dart';
+import '../../../inventory/domain/entities/item.dart';
+import '../../domain/entities/movement_record.dart';
+import '../../domain/repositories/movement_repository.dart';
 
 class MockMovementRepository implements MovementRepository {
   MockMovementRepository({MockDatabase? db}) : _db = db ?? MockDatabase.instance;

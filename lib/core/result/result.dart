@@ -12,6 +12,8 @@
 ///   failure: (failure) => ...,
 /// );
 /// ```
+import '../errors/failures.dart';
+
 sealed class Result<T> {
   const Result();
 
@@ -52,7 +54,7 @@ sealed class Result<T> {
   }) =>
       switch (this) {
         Success(:final value) => success(value),
-        Failure(:final failure) => failure(failure),
+        Failure(failure: final err) => failure(err),
       };
 }
 

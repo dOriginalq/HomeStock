@@ -1,7 +1,7 @@
 import '../../../../core/result/result.dart';
 import '../../../../shared/data/mock_database.dart';
-import '../../search/domain/entities/item_search_result.dart';
-import '../../search/domain/repositories/search_repository.dart';
+import '../../domain/entities/item_search_result.dart';
+import '../../domain/repositories/search_repository.dart';
 
 class MockSearchRepository implements SearchRepository {
   MockSearchRepository({MockDatabase? db}) : _db = db ?? MockDatabase.instance;
