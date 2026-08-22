@@ -6,7 +6,7 @@ import '../../../../app/theme/app_colors.dart';
 import '../../../../app/theme/app_spacing.dart';
 import '../../../../app/theme/app_typography.dart';
 import '../../../../core/constants/route_names.dart';
-import '../../home/presentation/controllers/home_controller.dart';
+import '../../../home/presentation/controllers/home_controller.dart';
 
 class AddRoomScreen extends ConsumerStatefulWidget {
   const AddRoomScreen({super.key});
@@ -133,6 +133,48 @@ class _AddRoomScreenState extends ConsumerState<AddRoomScreen> {
                   labelText: 'Room Name *',
                   hintText: 'e.g., Bedroom, Kitchen, Garage',
                   prefixIcon: Icon(Icons.meeting_room_outlined),
+                ),
+              ),
+              const SizedBox(height: 12),
+
+              // Room Preset Suggestions
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    'Bedroom',
+                    'Living Room',
+                    'Kitchen',
+                    'Home Office',
+                    'Garage',
+                    'Bathroom',
+                    'Balcony',
+                    'Basement',
+                    'Dining Room',
+                  ].map((preset) {
+                    return Padding(
+                      padding: const EdgeInsets.only(right: 8),
+                      child: ActionChip(
+                        label: Text(
+                          preset,
+                          style: AppTypography.labelSmall.copyWith(
+                            fontWeight: FontWeight.w600,
+                            color: AppColors.primary,
+                          ),
+                        ),
+                        backgroundColor: const Color(0xFFF1F8F1),
+                        side: const BorderSide(color: Color(0xFFC8E6C9)),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                        onPressed: () {
+                          setState(() {
+                            _nameController.text = preset;
+                          });
+                        },
+                      ),
+                    );
+                  }).toList(),
                 ),
               ),
               const SizedBox(height: AppSpacing.lg),
