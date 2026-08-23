@@ -4,10 +4,12 @@
 *.pyc
 *.swp
 .DS_Store
+Thumbs.db
 .atom/
 .buildlog/
 .history
 .svn/
+.metadata
 migrate_working_dir/
 
 # IntelliJ related
@@ -29,6 +31,16 @@ migrate_working_dir/
 .pub-cache/
 .pub/
 /build/
+*.g.dart
+*.freezed.dart
+
+# Graphify machine-specific sidecars
+graphify-out/.graphify_*
+
+# Android local configuration and builds
+android/local.properties
+android/.gradle/
+android/app/build/
 
 # Symbol processing related
 symbols/
@@ -40,3 +52,4 @@ node_modules/
 google-services.json
 GoogleService-Info.plist
 *.env
+
