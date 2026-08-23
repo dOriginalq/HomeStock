@@ -18,15 +18,13 @@ import '../../features/storage/presentation/screens/add_storage_screen.dart';
 import '../../features/storage/presentation/screens/storage_detail_screen.dart';
 import '../../shared/widgets/main_shell.dart';
 
-part 'app_router.g.dart';
-
 /// Provides the GoRouter instance for the application.
 /// Uses Riverpod for access to auth state to handle redirects.
-@riverpod
-GoRouter appRouter(Ref ref) => GoRouter(
-      initialLocation: RouteNames.home,
-      debugLogDiagnostics: true,
-      routes: [
+final appRouterProvider = Provider<GoRouter>((ref) {
+  return GoRouter(
+    initialLocation: RouteNames.home,
+    debugLogDiagnostics: true,
+    routes: [
         // Auth routes (no shell)
         GoRoute(
           path: RouteNames.login,
@@ -132,3 +130,4 @@ GoRouter appRouter(Ref ref) => GoRouter(
         ),
       ),
     );
+});
