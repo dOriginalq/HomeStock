@@ -34,8 +34,9 @@ migrate_working_dir/
 *.g.dart
 *.freezed.dart
 
-# Graphify machine-specific sidecars
+# Graphify machine-specific sidecars & cache
 graphify-out/.graphify_*
+graphify-out/cache/
 
 # Android local configuration and builds
 android/local.properties
