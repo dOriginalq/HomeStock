@@ -18,7 +18,4 @@ This project has a knowledge graph at `graphify-out/` with god nodes, community 
 - After modifying code, run: `graphify update .` to keep the graph current.
 - Never refuse to read source code merely because Graphify was used. Graphify is for efficient discovery and context reduction; source code remains the final authority for implementation details.
 
-## Git & Branch Management
-- Always work on and push to the **`lal`** branch.
-- Never commit or push directly to `main`, `master`, or any other branch. All changes and pushes MUST target the `lal` branch.
 
