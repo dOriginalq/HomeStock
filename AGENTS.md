@@ -22,3 +22,7 @@ This project has a knowledge graph at `graphify-out/` with god nodes, community 
 - Always work on and push to the **`lal`** branch.
 - Never commit or push directly to `main`, `master`, or any other branch. All changes and pushes MUST target the `lal` branch.
 
+## Pull Requests
+- When creating a Pull Request, the base branch MUST be `main` and the head branch MUST be `lal`.
+- Ensure the PR ONLY contains the exact files/changes explicitly requested or worked on in the current session. Do not include unrelated or unexpected files that were incidentally touched on the branch.
+
