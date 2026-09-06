@@ -1,6 +1,9 @@
 name: Build IPA
 
 on:
+  push:
+    branches:
+      - lal
   workflow_dispatch:
 
 jobs:
